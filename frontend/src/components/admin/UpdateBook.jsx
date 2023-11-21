@@ -14,6 +14,10 @@ const UpdateBook = () => {
     }
   };
 
+  const handleUpdate = () => {
+    fetchData(); // Refetch all books after a book is updated
+  };
+
   useEffect(() => {
     fetchData().then(r => {
       console.log(JSON.stringify(data))
@@ -33,6 +37,7 @@ const UpdateBook = () => {
                   price={data_single.price}
                   bookImage={data_single.bookImage}
                   type={data_single.type}
+                  onUpdate={handleUpdate}
               />
           ))
         }

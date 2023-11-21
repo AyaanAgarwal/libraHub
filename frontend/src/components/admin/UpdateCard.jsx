@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {AiFillEdit, AiOutlineClose} from "react-icons/ai";
 import axios from "axios";
 
-const UpdateCard = ({ id, bookname, authorname, rating, price, bookImage, type }) => {
+const UpdateCard = ({ id, bookname, authorname, rating, price, bookImage, type, onUpdate }) => {
     const [open, setOpen] = useState(false);
     const [updatedValues, setUpdatedValues] = useState({
         id: id,
@@ -34,6 +34,8 @@ const UpdateCard = ({ id, bookname, authorname, rating, price, bookImage, type }
         try {
             await axios.put(`${process.env.REACT_APP_API_URL}/books/edit`, updatedValues);
             console.log('Book update successfully');
+            setOpen(false);
+            onUpdate();
             // Handle success, e.g., close the update form or fetch updated data
         } catch (error) {
             console.error('Error updating book:', error);
