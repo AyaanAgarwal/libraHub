@@ -42,6 +42,27 @@ export const createBook = async (req, res, next) => {
   }
 };
 
+
+export const deleteBook = async (req, res, next) => {
+  try {
+    const delBook = await Books.findById({_id: req.params.id});
+    if(delBook){
+      console.log(delBook);
+      await Books.findByIdAndDelete({_id: delBook._id});
+      res.status(200).json({
+        message: 'Book deleted successfully'
+      })
+    }
+    else{
+      res.status(404).json({
+        message: 'Book not found'
+      })
+    }
+  } catch (err) {
+    next(err);
+  }
+};
+
 export const requestRoute = async (req, res, next) => {
   try {
     const getUser = await User.findOne({ _id: req.body.userId });

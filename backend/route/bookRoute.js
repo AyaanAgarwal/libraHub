@@ -5,6 +5,7 @@ import {
   booksRoute,
   categoryRoute,
   createBook,
+    deleteBook,
   getAllRentalsRoute,
   moveToRentedRoute,
   requestedBooksRoute,
@@ -16,6 +17,7 @@ router.get("/", booksRoute); // get all books.
 router.get("/:id", bookRoute);
 router.get("/all/:type", categoryRoute);
 router.post("/create", createBook); // create a book.
+router.delete("/delete/:id", deleteBook); // delete a book.
 router.post("/request", requestRoute); // request a book to admin.
 router.get("/request/all", requestedBooksRoute); // get all the requested Books.
 router.get("/rentals/all", getAllRentalsRoute); //Get all the rented (curr) books.

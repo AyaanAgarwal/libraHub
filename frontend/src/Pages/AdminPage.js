@@ -15,7 +15,7 @@ const AdminPage = () => {
   return (
     <>
       <Header />
-      <div className="h-[100vh] flex">
+      <div className="flex">
         <div
           onClick={() => setToggleVal(!toggleVal)}
           className="absolute hidden sm:block top-16 right-0 bg-slate-800 text-white text-xl rounded-l-lg shadow-2xl font-extralight p-2"
