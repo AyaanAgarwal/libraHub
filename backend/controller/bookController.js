@@ -63,6 +63,18 @@ export const deleteBook = async (req, res, next) => {
   }
 };
 
+export const updateBook = async (req, res, next) =>{
+  try{
+    await Books.findByIdAndUpdate({ _id: req.body.id }, req.body);
+    res.status(200).json({
+      message: "Book updated sucessfully!",
+    });
+  }
+  catch(err){
+    next(err);
+  }
+}
+
 export const requestRoute = async (req, res, next) => {
   try {
     const getUser = await User.findOne({ _id: req.body.userId });
