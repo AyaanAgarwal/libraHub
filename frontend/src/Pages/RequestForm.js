@@ -4,7 +4,8 @@ import { useLocation } from "react-router-dom";
 import GetBookForm from "../components/GetBookForm";
 import Header from "../components/Header";
 import MobileNav from "../components/MobileNav";
-import formImg from "../assets/form-image.svg";
+// import formImg from "../assets/form-image.svg";
+import formImg from "../assets/Checklist.png";
 
 const RequestForm = () => {
   const location = useLocation();
@@ -26,7 +27,7 @@ const RequestForm = () => {
   return (
     <>
       <Header />
-      <div className="w[100%] h-[100%] flex md:flex-col-reverse justify-start items-center bg-gradient-to-b from-gray-800 to-gray-700 pt-[130px] md:pl-5 sm:pl-0 md:pt-[80px] pb-20">
+      <div className="w[100%] h-[100%] flex md:flex-col-reverse justify-start items-center bg-slate-100 pt-[130px] md:pl-5 sm:pl-0 md:pt-[80px] pb-20">
         <GetBookForm defaultDetail={info?.data} />
         <div className="w-[450px] h-[450px] sm:w-[100%] sm:h-[250px] ml-40 md:ml-0">
           <img

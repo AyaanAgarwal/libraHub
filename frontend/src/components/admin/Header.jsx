@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaRegBell } from "react-icons/fa";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [reqData, setReqData] = useState([]);
@@ -22,10 +23,12 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="fixed top-0 z-30 right-0 left-0 w-[100%] h-[50px] flex justify-between items-center pl-10 sm:pl-5 sm:pr-8 pr-20 py-10 md:py-7 border-b-[1px] border-b-slate-500 shadow-xl bg-slate-800">
-      <p className="font-extrabold text-4xl md:text-3xl text-white sm:text-lg">
-        Librahub <span className="text-lg text-slate-300">( Dashboard )</span>
+    <div className="fixed top-0 z-30 right-0 left-0 w-[100%] h-[50px] flex justify-between items-center pl-10 sm:pl-5 sm:pr-8 pr-20 py-10 md:py-7 border-b-[1px] border-b-slate-500 shadow-xl bg-white">
+      <Link to="/">
+      <p className="font-extrabold text-4xl md:text-3xl text-black sm:text-lg">
+        Libra<span className="text-blue-500">Hub</span>
       </p>
+      </Link>
 
       <div
         onClick={() => setShowNoti(!showNoti)}
@@ -36,11 +39,11 @@ const Header = () => {
             {reqData?.length}
           </p>
         )}
-        <FaRegBell />
+        <FaRegBell className="text-black"/>
       </div>
 
       {showNoti && (
-        <div className="absolute right-20 top-16 w-[250px] h-max bg-slate-500 rounded-md p-2 text-center">
+        <div className="absolute right-20 top-16 w-[250px] h-max bg-blue-500 rounded-md p-2 text-center">
           <p className="text-white">
             <span className="font-extrabold">{reqData?.length}</span> Book
             request received !

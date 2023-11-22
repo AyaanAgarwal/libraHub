@@ -3,7 +3,7 @@ import createImg from "../../assets/Create-amico.svg";
 import axios from "axios";
 
 const className =
-  "bg-slate-500 px-4 py-3 w-[400px] sm:w-[90%] mb-5 text-white rounded-2xl outline-none";
+  "bg-blue-100 px-4 py-3 w-[400px] sm:w-[90%] mb-5 text-black rounded-2xl outline-none";
 
 const CreateBook = () => {
   const [message, setMessage] = useState("");
@@ -104,7 +104,7 @@ const CreateBook = () => {
         <button
           value="submit"
           type="submit"
-          className="bg-pink-700 px-4 py-3 w-[400px] sm:w-[90%] mb-3 text-white rounded-2xl outline-none"
+          className="bg-blue-400 hover:bg-blue-500 px-4 py-3 w-[400px] sm:w-[90%] mb-3 text-white rounded-2xl outline-none"
         >
           Create Book
         </button>

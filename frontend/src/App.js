@@ -11,6 +11,7 @@ import axios from "axios";
 import SingleBookPage from "./Pages/SingleBookPage";
 import RequestForm from "./Pages/RequestForm";
 import AdminPage from "./Pages/AdminPage";
+import AdminLogin from "./Pages/AdminLogin"
 
 const App = () => {
   const dispatch = useDispatch();
@@ -43,6 +44,7 @@ const App = () => {
         <Route path="/book/:id" element={<SingleBookPage />}></Route>
         <Route path="/book/request/:id" element={<RequestForm />}></Route>
         <Route path="/admin/dashboard" element={<AdminPage />}></Route>
+        <Route path="/admin/login" element={<AdminLogin />}></Route>
       </Routes>
     </div>
   );

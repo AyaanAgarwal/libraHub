@@ -47,7 +47,7 @@ const LoginForm = ({ changeForm }) => {
 
   return (
     <div className="">
-      <p className="font-bold text-xl md:text-center md:text-2xl">Login</p>
+      <p className="font-bold text-xl md:text-center md:text-2xl text-blue-500">Login</p>
       <p className="my-3 text-center text-sm font-semibold text-red-600 ease-in">
         {authDetails.error?.message}
       </p>
@@ -56,19 +56,19 @@ const LoginForm = ({ changeForm }) => {
           onChange={(e) => handleChanges("email", e.target.value)}
           required
           type="email"
-          className="md:w-[80%] bg-transparent border-b-slate-700 border-2 outline-none mt-5 p-2 w-[260px]"
+          className="md:w-[80%] bg-blue-100 rounded-xl border-2 border-blue-200 outline-none mt-5 p-2 w-[260px]"
           placeholder="Email address.."
         ></input>
         <input
           onChange={(e) => handleChanges("password", e.target.value)}
           required
           type="password"
-          className="md:w-[80%] md:my-5 bg-transparent border-b-slate-700 border-2 outline-none mt-5 p-2 w-[260px]"
+          className="md:w-[80%] md:my-5 bg-blue-100 rounded-xl border-2 border-blue-200 outline-none mt-5 p-2 w-[260px]"
           placeholder="Password"
         ></input>
         <button
           type="submit"
-          className="mt-5 w-[260px] shadow-md bg-gradient-to-br from-rose-600 to-rose-500 text-white font-bold p-2 rounded-lg"
+          className="mt-5 w-[260px] shadow-md bg-blue-400 text-white font-bold p-2 rounded-lg hover:bg-blue-500"
         >
           Login
         </button>

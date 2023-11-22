@@ -10,7 +10,7 @@ const SearchBar = () => {
       {location.pathname !== "/search" && (
         <div
           onClick={() => navigate("/search")}
-          className="flex justify-between text-slate-700 font-semibold px-3 items-center md:hidden w-[300px] h-[30px] rounded-lg bg-gradient-to-r from-slate-500 to-slate-300 cursor-pointer"
+          className="flex justify-between text-slate-700 font-semibold px-5 items-center md:hidden w-[300px] h-[30px] rounded-lg cursor-pointer border py-3"
         >
           <p>Search Books..</p>
           <IoSearch />

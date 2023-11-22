@@ -109,7 +109,7 @@ const GetBookForm = ({ defaultDetail }) => {
           )}
         </div>
       )}
-      <p className="text-5xl md:text-4xl sm:text-2xl font-bold text-white sm:text-center">
+      <p className="text-5xl md:text-4xl sm:text-2xl font-bold text-blue-500 sm:text-center">
         Request Form
       </p>
       <form
@@ -117,28 +117,28 @@ const GetBookForm = ({ defaultDetail }) => {
         className="flex justify-center items-start sm:items-center flex-col mt-5 sm:w-[100%]"
       >
         <input
-          className="bg-slate-500 px-4 py-3 w-[400px] sm:w-[90%] mb-3 text-white rounded-2xl outline-none"
+          className="bg-blue-200 px-4 py-3 w-[400px] sm:w-[90%] mb-3 text-black rounded-2xl outline-none"
           type="text"
           placeholder="Enter Book Id"
           defaultValue={defaultDetail?._id}
           readOnly
         ></input>
         <input
-          className="bg-slate-500 px-4 py-3 w-[400px] sm:w-[90%] mb-3 text-white rounded-2xl outline-none"
+          className="bg-blue-200 px-4 py-3 w-[400px] sm:w-[90%] mb-3 text-black rounded-2xl outline-none"
           type="text"
           placeholder="Book Name"
           defaultValue={defaultDetail?.bookname}
           readOnly
         ></input>
         <input
-          className="bg-slate-500 px-4 py-3 w-[400px] sm:w-[90%] mb-3 text-white rounded-2xl outline-none"
+          className="bg-blue-200 px-4 py-3 w-[400px] sm:w-[90%] mb-3 text-black rounded-2xl outline-none"
           type="text"
           placeholder="Author Name"
           defaultValue={defaultDetail?.authorname}
           readOnly
         ></input>
         <input
-          className="bg-slate-500 px-4 py-3 w-[400px] sm:w-[90%] mb-3 text-white rounded-2xl outline-none"
+          className="bg-blue-200 px-4 py-3 w-[400px] sm:w-[90%] mb-3 text-black rounded-2xl outline-none"
           type="text"
           placeholder="Genre"
           defaultValue={defaultDetail?.type}
@@ -146,23 +146,23 @@ const GetBookForm = ({ defaultDetail }) => {
         ></input>
         <div className="flex justify-between items-center w-[400px] sm:w-[90%] mb-3">
           <div className="flex flex-col justify-center items-start">
-            <label htmlFor="from" className="text-white font-semibold">
+            <label htmlFor="from" className="text-black font-semibold">
               From *
             </label>
             <input
               onChange={handleDateChange}
               id="from"
-              className="bg-slate-500 px-4 py-3 sm:text-sm mt-1 w-[180px] sm:w-[160px] mb-3 text-white rounded-2xl outline-none"
+              className="bg-blue-200 px-4 py-3 sm:text-sm mt-1 w-[180px] sm:w-[160px] mb-3 text-black rounded-2xl outline-none"
               type="date"
               required
               min={min1}
             ></input>
           </div>
           <div className="flex flex-col">
-            <label className="text-white font-semibold">To *</label>
+            <label className="text-black font-semibold">To *</label>
             <input
               onChange={(e) => setEndDate(e.target.value)}
-              className="bg-slate-500 sm:text-sm px-4 py-3 mt-1 w-[180px] sm:w-[160px] mb-3 text-white rounded-2xl outline-none"
+              className="bg-blue-200 sm:text-sm px-4 py-3 mt-1 w-[180px] sm:w-[160px] mb-3 text-black rounded-2xl outline-none"
               type="date"
               required
               min={min2}
@@ -170,9 +170,9 @@ const GetBookForm = ({ defaultDetail }) => {
           </div>
         </div>
         <div className="relative">
-          <p className="absolute font-semibold text-white top-3 left-5">₹</p>
+          <p className="absolute font-semibold text-black top-3 left-5">₹</p>
           <input
-            className="bg-slate-500 px-10 py-3 w-[400px] sm:w-[90%] mb-3 text-white rounded-2xl outline-none"
+            className="bg-blue-200 px-10 py-3 w-[400px] sm:w-[90%] mb-3 text-black rounded-2xl outline-none"
             type="number"
             placeholder="Amount"
             value={amount ? amount : defaultDetail?.price}
@@ -181,7 +181,7 @@ const GetBookForm = ({ defaultDetail }) => {
         </div>
         <button
           type="submit"
-          className="w-[400px] sm:w-[90%] bg-pink-700 p-3 mt-3 text-white font-semibold rounded-xl text-lg"
+          className="w-[400px] sm:w-[90%] bg-blue-400 hover:bg-blue-500 p-3 mt-3 text-white font-semibold rounded-xl text-lg"
         >
           Request the Book
         </button>

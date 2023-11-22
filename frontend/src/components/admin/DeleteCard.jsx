@@ -17,13 +17,13 @@ const DeleteCard = ({ id, bookname, authorname, bookImage, type }) => {
     };
 
     return (
-        <div className={'flex bg-[#64748a] p-2 rounded-xl gap-4'}>
+        <div className={'flex bg-blue-100 p-5 rounded-xl gap-4'}>
             <div>
                 <img src={bookImage} alt={''} className={'w-20 h-32 rounded-xl'} />
             </div>
             <div className={'flex flex-col justify-between flex-1'}>
-                <div className={'text-white text-xl'}>{bookname}<br />({type})</div>
-                <div className={'text-white text-lg font-bold'}>{authorname}</div>
+                <div className={'text-black text-xl'}>{bookname}<br />({type})</div>
+                <div className={'text-slate-500 text-lg'}>{authorname}</div>
                 <div className={'flex justify-end'}>
                     <button
                         onClick={handleDelete}

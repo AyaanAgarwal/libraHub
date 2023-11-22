@@ -63,7 +63,7 @@ const RentedBorad = () => {
     <div className="w-[95%] min-h-max max-h-[98%] overflow-x-scroll overflow-y-scroll scrollbar">
       <table className="w-[100%] border-collapse ">
         <thead>
-          <tr className="sticky bg-slate-800 z-10  top-0 left-0 right-0 border-[1px] border-slate-200 text-white">
+          <tr className="sticky bg-blue-400 z-10  top-0 left-0 right-0 border-[1px] border-slate-200 text-white">
             {data?.map((data, idx) => {
               return (
                 <th
@@ -83,12 +83,12 @@ const RentedBorad = () => {
               <tr
                 style={{ opacity: data?.returned ? "0.3" : "1" }}
                 key={idx}
-                className="bg-slate-500 text-white border-[1px] border-slate-200"
+                className="bg-blue-200 text-black border-[1px] border-slate-200"
               >
-                <td className="bg-fixed top-0  left-0 bottom- 0 bg-slate-900 p-3 text-center border-[0.5px] border-r-slate-400 w-[100%] whitespace-nowrap ">
+                <td className="bg-fixed top-0  left-0 bottom- 0 p-3 text-center border-[0.5px] border-r-slate-400 w-[100%] whitespace-nowrap ">
                   {idx + 1}
                 </td>
-                <td className="p-3 text-center border-[0.5px] border-r-slate-400 w-[100%] whitespace-nowrap ">
+                <td className="p-3 text-center border-[0.5px] border-r-slate-400 w-[100%] whitespace-nowrap">
                   {data?.userId}
                 </td>
                 <td className="p-3 text-center border-[0.5px] border-r-slate-400 w-[100%] whitespace-nowrap ">
@@ -119,7 +119,7 @@ const RentedBorad = () => {
                   {!data?.returned && (
                     <button
                       onClick={() => handleStatus(data)}
-                      className="w-[100%] px-2 font-semibold bg-emerald-500 p-1 rounded-md shadow-md"
+                      className="w-[100%] px-2 font-semibold bg-emerald-500 p-1 rounded-md shadow-md text-white"
                     >
                       Received
                     </button>

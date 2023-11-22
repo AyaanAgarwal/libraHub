@@ -27,8 +27,8 @@ const UserInfo = () => {
 
   return (
     <>
-      <p className="text-lg text-gray-300 font-semibold bg-pink-800 py-2 px-2 rounded-md sm:w-[100%] sm:mt-5">
-        Hello, <span className="text-white">{user?.username}</span>
+      <p className="text-lg text-black font-semibold bg-blue-200 py-2 px-2 rounded-md sm:w-[100%] sm:mt-5">
+        Hello, <span className="text-blue-500">{user?.username}</span>
       </p>
       <div className="flex justify-center items-start flex-col">
         <ExtrasInfoCard
@@ -54,14 +54,14 @@ const UserInfo = () => {
         {user?.isAdmin && (
           <button
             onClick={() => navigate("/admin/dashboard")}
-            className="p-3 w-[100%] rounded-md bg-emerald-600 text-white font-semibold text-lg shadow-sm"
+            className="p-3 w-[100%] rounded-md bg-blue-200 text-white font-semibold text-lg shadow-sm"
           >
             View Dashboard
           </button>
         )}
         <button
           onClick={handleLogout}
-          className="p-3 mt-3 w-[100%] rounded-md bg-red-500 text-white font-semibold text-lg shadow-sm"
+          className="p-3 mt-3 w-[100%] rounded-md bg-blue-400 text-white font-semibold text-lg shadow-sm hover:bg-blue-500"
         >
           Logout
         </button>

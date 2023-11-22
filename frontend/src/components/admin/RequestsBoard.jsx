@@ -74,7 +74,7 @@ const RequestsBoard = () => {
     <div className="w-[95%] min-h-max max-h-[98%] overflow-x-scroll overflow-y-scroll scrollbar">
       <table className="w-[100%] border-collapse ">
         <thead>
-          <tr className="sticky bg-slate-800  top-0 left-0 right-0 border-[1px] border-slate-200 text-white">
+          <tr className="sticky bg-blue-400  top-0 left-0 right-0 border-[1px] border-slate-200 text-white">
             {data?.map((data, idx) => {
               return (
                 <th
@@ -96,9 +96,9 @@ const RequestsBoard = () => {
                   opacity: isFound(data?.userId, data?.bookId) ? "0.5" : "1",
                 }}
                 key={idx}
-                className="bg-slate-500 text-white border-[1px] border-slate-200"
+                className="bg-blue-200 text-black border-[1px] border-slate-200"
               >
-                <td className="bg-fixed top-0  left-0 bottom- 0 bg-slate-900 p-3 text-center border-[0.5px] border-r-slate-400 w-[100%] whitespace-nowrap ">
+                <td className="bg-fixed top-0  left-0 bottom- 0 p-3 text-center border-[0.5px] border-r-slate-400 w-[100%] whitespace-nowrap ">
                   {idx + 1}
                 </td>
                 <td className="p-3 text-center border-[0.5px] border-r-slate-400 w-[100%] whitespace-nowrap ">
@@ -128,13 +128,13 @@ const RequestsBoard = () => {
                 <td className="p-3 text-center border-[0.5px] border-r-slate-400 w-[100%] whitespace-nowrap ">
                   <button
                     onClick={() => handleRequest("accept", data)}
-                    className="w-[100px] font-semibold bg-emerald-500 p-1 rounded-md shadow-md"
+                    className="w-[100px] font-semibold bg-emerald-500 p-1 rounded-md shadow-md text-white"
                   >
                     ACCEPT
                   </button>
                 </td>
                 <td className="p-3 text-center font-semibold border-[0.5px] border-r-slate-400 w-[100%] whitespace-nowrap ">
-                  <button className="w-[100px] bg-red-500 p-1 rounded-md shadow-md">
+                  <button className="w-[100px] bg-red-500 p-1 rounded-md shadow-md text-white">
                     DECLINE
                   </button>
                 </td>

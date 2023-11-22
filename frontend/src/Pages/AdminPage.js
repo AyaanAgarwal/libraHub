@@ -20,7 +20,7 @@ const AdminPage = () => {
           onClick={() => setToggleVal(!toggleVal)}
           className="absolute hidden sm:block top-16 right-0 bg-slate-800 text-white text-xl rounded-l-lg shadow-2xl font-extralight p-2"
         >
-          {toggleVal ? <AiOutlineArrowRight /> : <AiOutlineArrowLeft />}
+          {toggleVal ? <AiOutlineArrowRight className="text-black"/> : <AiOutlineArrowLeft className="text-black"/>}
         </div>
         <SideBar dimension={dimension} status={toggleVal} />
         <ContentViewer />

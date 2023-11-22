@@ -35,7 +35,7 @@ const BooksPage = () => {
       <Header />
       <div
         style={{ position: !toggler?.status ? "relative" : "fixed" }}
-        className="w[100%] h-max bg-gradient-to-b from-gray-800 to-gray-700 pt-[130px] pl-20 md:pl-5 md:pt-[80px] pb-20"
+        className="w[100%] h-max bg-slate-100 pt-[50px] md:pl-5 md:pt-[80px] pb-20"
       >
         <p
           style={{

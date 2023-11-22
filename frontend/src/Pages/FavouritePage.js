@@ -54,7 +54,7 @@ const FavouritePage = () => {
   return (
     <>
       <Header />
-      <div className="w[100%] min-h-[100vh] max-h-[100%] bg-gradient-to-b from-gray-800 to-gray-700 pt-[130px] md:pl-5 md:pt-[80px] pb-20">
+      <div className="w[100%] min-h-[100vh] max-h-[100%] bg-slate-100 pt-[130px] md:pl-5 md:pt-[80px] pb-20">
         <p
           style={{
             translate: msg ? "0%" : "-100%",
@@ -64,7 +64,7 @@ const FavouritePage = () => {
           Book Removed from FAV!
         </p>
         <div className="ml-32 md:ml-5 sm:ml-1">
-          <p className="text-5xl md:text-4xl sm:text-2xl font-bold text-white">
+          <p className="text-5xl md:text-4xl sm:text-2xl font-bold text-blue-500">
             Favourite Books
           </p>
           <div className="flex flex-wrap justify-start items-center pr-20 xsm:pr-5 ">
@@ -82,7 +82,7 @@ const FavouritePage = () => {
             ) : (
               <div className="w-[500px] sm:w-[100%] h-[400px] mx-auto mt-20 sm:mt-0">
                 <img className="w-[100%] h-[100%]" src={emptyStore}></img>
-                <p className="text-center text-2xl sm:text-xl sm:-mt-24 text-white font-bold -mt-14">
+                <p className="text-center text-2xl sm:text-xl sm:-mt-24 text-black font-bold -mt-14">
                   Favourite list is Empty!
                 </p>
               </div>

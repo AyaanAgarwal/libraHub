@@ -96,7 +96,7 @@ const UsersBoard = () => {
     <div className="w-[95%] h-max overflow-x-scroll scrollbar">
       <table className="w-[100%] border-collapse ">
         <thead>
-          <tr className="bg-slate-800 text-white border-[1px] border-slate-200">
+          <tr className="bg-blue-400 text-white border-[1px] border-slate-200">
             {data?.map((data, idx) => {
               return (
                 <th
@@ -115,7 +115,7 @@ const UsersBoard = () => {
             return (
               <tr
                 key={idx}
-                className="bg-slate-500 text-white border-[1px] border-slate-200"
+                className="bg-blue-200 text-black border-[1px] border-slate-200"
               >
                 <td className="p-3 border-r-slate-400 w-[100%] whitespace-nowrap flex justify-center items-center text-3xl">
                   {<FaRegUserCircle />}
@@ -144,7 +144,7 @@ const UsersBoard = () => {
                 <td className="p-3 text-center border-[0.5px] border-r-slate-400 w-[100%] whitespace-nowrap ">
                   <button
                     onClick={() => handleUpdate(data)}
-                    className="w-[100px] font-semibold bg-emerald-500 p-1 rounded-md shadow-md"
+                    className="w-[100px] font-semibold bg-emerald-500 p-1 rounded-md shadow-md text-white"
                   >
                     UPDATE
                   </button>
@@ -152,7 +152,7 @@ const UsersBoard = () => {
                 <td className="p-3 text-center font-semibold border-[0.5px] border-r-slate-400 w-[100%] whitespace-nowrap ">
                   <button
                     onClick={() => handleUserDel(data)}
-                    className="w-[100px] bg-red-500 p-1 rounded-md shadow-md"
+                    className="w-[100px] bg-red-500 p-1 rounded-md shadow-md text-white"
                   >
                     DELETE
                   </button>

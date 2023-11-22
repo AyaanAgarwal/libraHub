@@ -33,14 +33,14 @@ const ExtrasInfoCard = ({ card, book, handle, visible }) => {
     <>
       <div
         onClick={() => handleVisibility(card)}
-        className=" bg-gradient-to-r from-slate-600 to-slate-500 text-white font-semibold flex justify-between items-center  shadow-sm p-3 w-[100%] mt-5 rounded-md cursor-pointer"
+        className=" bg-blue-200 text-black font-semibold flex justify-between items-center  shadow-sm p-3 w-[100%] mt-5 rounded-md cursor-pointer"
       >
         <p>{card}</p>
         <AiOutlineDown />
       </div>
       <div
         style={{ display: visible === card ? "block" : "none" }}
-        className="w-[100%] h-[100%] px-3 py-4 bg-slate-400 mt-2 rounded-md"
+        className="w-[100%] h-[100%] px-3 py-4 bg-blue-300 mt-2 rounded-md"
       >
         {book?.length > 0 ? (
           book?.map((val, idx) => {

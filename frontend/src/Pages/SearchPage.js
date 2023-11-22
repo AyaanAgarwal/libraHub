@@ -53,10 +53,10 @@ const SearchPage = () => {
       <Header />
       <div
         style={{ position: !toggler?.status ? "relative" : "fixed" }}
-        className="w[100%] min-h-[100vh] max-h-[100%] bg-gradient-to-b from-gray-800 to-gray-700 pt-[130px] md:pl-5 sm:pl-2 md:pt-[80px] pb-20"
+        className="w[100%] min-h-[100vh] max-h-[100%] bg-slate-100 pt-[130px] md:pl-5 sm:pl-2 md:pt-[80px] pb-20"
       >
-        <div className="ml-80 md:ml-5 sm:ml-1">
-          <p className="text-5xl md:text-4xl sm:text-2xl font-bold text-white">
+        <div className="ml-10 md:ml-5 sm:ml-1">
+          <p className="text-5xl md:text-4xl sm:text-2xl font-bold text-blue-500">
             Browse
           </p>
           <div className="mt-5 relative flex justify-start items-center">
@@ -65,20 +65,20 @@ const SearchPage = () => {
             </div>
             <input
               onChange={(e) => setTopic(e.target.value)}
-              className="w-[400px] sm:w-[290px] xsm:w-[230px] xsm:text-sm  py-2 pl-12 sm:pl-10 outline-none text-xl sm:text-lg text-white rounded-full bg-slate-500"
+              className="w-[400px] sm:w-[290px] xsm:w-[230px] xsm:text-sm  py-2 pl-12 sm:pl-10 outline-none text-xl sm:text-lg text-black rounded-full bg-white"
               type="text"
               placeholder="Title, Author or Keyword.."
             ></input>
             <button
               onClick={() => handleSearch("byInput")}
-              className="w-[200px] sm:w-[130px] xsm:w-[100px] xsm:text-sm xsm:p-2 bg-slate-900 ml-2 rounded-3xl p-3 text-white text-lg"
+              className="w-[150px] sm:w-[130px] xsm:w-[100px] xsm:text-sm xsm:p-2 bg-blue-400 ml-2 rounded-3xl px-1 py-2 text-white text-lg hover:bg-blue-500"
             >
               Search
             </button>
           </div>
         </div>
-        <div className="mt-7 ml-80 md:ml-5 sm:ml-1">
-          <p className="text-5xl md:text-4xl sm:text-2xl font-bold text-white">
+        <div className="mt-7 ml-10 md:ml-5 sm:ml-1">
+          <p className="text-5xl md:text-4xl sm:text-2xl font-bold text-blue-500">
             By Topic
           </p>
           <div className="flex justify-start items-center flex-wrap w-[70%] md:w-[100%] mt-5">
@@ -90,7 +90,7 @@ const SearchPage = () => {
                 }}
                 onClick={() => handleSearch("byTopic", topic)}
                 key={idx}
-                className="p-2 text-white rounded-lg m-1 bg-slate-600 shadow-md cursor-pointer"
+                className="p-2 text-black rounded-lg m-1 bg-blue-200 shadow-md cursor-pointer"
               >
                 {topic}
               </p>
@@ -98,16 +98,16 @@ const SearchPage = () => {
           </div>
         </div>
         <div className="mt-7 md:ml-5 sm:ml-1">
-          <p className="text-5xl md:text-4xl sm:text-2xl font-bold text-white ml-80 md:ml-5 sm:ml-1">
+          <p className="text-5xl md:text-4xl sm:text-2xl font-bold text-blue-500 ml-10 md:ml-5 sm:ml-1">
             Related Searches
           </p>
-          <div className="w-[100%] flex flex-wrap justify-start sm:justify-self-start items-center  mt-5 pl-80 md:pl-5 sm:pl-0">
+          <div className="w-[100%] flex flex-wrap justify-start sm:justify-self-start items-center  mt-5 pl-10 md:pl-5 sm:pl-0">
             {searchedData?.length > 0 ? (
               searchedData?.map((data, idx) => (
                 <BookCard key={idx} data={data} />
               ))
             ) : (
-              <div className="w-[400px] sm:w-[350px] xsm:w-[300px] ml-52 sm:ml-0">
+              <div className="w-[400px] sm:w-[350px] xsm:w-[300px] sm:ml-0 ">
                 <img src={emptySearch} alt="empty"></img>
               </div>
             )}
