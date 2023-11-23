@@ -30,7 +30,7 @@ const App = () => {
       dispatch(setY());
     }
     getBooks();
-    document.title = "Uptime Library";
+    document.title = "LibraHub";
   }, []);
 
   return (
